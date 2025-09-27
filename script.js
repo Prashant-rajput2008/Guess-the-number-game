@@ -1,7 +1,6 @@
 let input = document.querySelector("input");
 let btn = document.querySelector("button");
 let result1 = document.querySelector("#result1");
-let result2 = document.querySelector("#result2");
 let result3 = document.querySelector("#result3");
 
 let randomNumber = Math.floor(Math.random() * 150) + 1;
@@ -15,7 +14,6 @@ function resetGame() {
     input.value = ""
     result1.textContent = "Take a Guess"; // default msg
     result1.style.color = "gold"; 
-    result2.textContent = ""; 
     result3.textContent = "";
 }
 
@@ -60,7 +58,7 @@ btn.addEventListener("click", () => {
         input.placeholder = "You Win......"
 
         setTimeout(() => {
-            input.placeholder = ""
+            input.placeholder = "Want To Play Again?"
             resetGame();
         }, 5000);
 
